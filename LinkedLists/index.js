@@ -36,13 +36,14 @@ class LinkedList {
 	prepend(value) {
 		let newNode = new Node(value)
 
-		//we want to hold onto the first node link information
-		const holder = this.head.next
-		//we assigned head to the new node
+		// We give the new node a next value of the previous head
+		newNode.next = this.head
+		// We tell the previous head, the previous node is the new Node
+		this.head.prev = newNode
+		//we finally new tell the head that this new node is King (head node ;)
 		this.head = newNode
-		//head is a point to the newNode, so we update its next value to the other linked node
-		this.head.next = holder
 		this.length++
+
 	}
 
 	insert(index, value) {

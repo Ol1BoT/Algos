@@ -48,15 +48,15 @@ let Roman = (s) => {
 
 	}
 
-	sumArr.forEach((v,i) => {
+	sumArr.forEach((v, i) => {
 
 		if (i == 0) {
 			total += v
 			return
 		}
 
-		if (sumArr[i-1] < v) {
-			total += v-sumArr[i-1]*2
+		if (sumArr[i - 1] < v) {
+			total += v - sumArr[i - 1] * 2
 			return
 		}
 
@@ -70,3 +70,4 @@ let Roman = (s) => {
 
 console.log(Roman("III"))
 console.log(Roman("IV"))
+console.log(Roman("CM"))
